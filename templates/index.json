@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "video_background_EmfQnx": {
+      "type": "video-background",
+      "settings": {
+        "video": "shopify://files/videos/PIGWHEELS.mp4",
+        "autoplay": true
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -39,6 +46,7 @@
     }
   },
   "order": [
+    "video_background_EmfQnx",
     "featured_collection"
   ]
 }
