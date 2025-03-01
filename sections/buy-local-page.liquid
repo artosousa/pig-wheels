@@ -1,0 +1,262 @@
+{{ 'section-buy-local-page.css' | asset_url | stylesheet_tag }}
+{{ 'mapbox-gl.css' | asset_url | stylesheet_tag }}
+{{ 'mapbox-gl.js' | asset_url | script_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="shop_locator page-width section-{{ section.id }}-padding">
+  <div class="shop_locator__content half-width rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+
+  <div class="shop_locator__map half-width">
+    <div id="map" style="height: 100%; width: 100%;"></div>
+    <div id="search-container">
+        <input 
+            id="search-input" 
+            type="text" 
+            placeholder="Shop name, address, or ZIP code..." 
+            style="padding: 10px; font-size: 16px;">
+        <button id="search-button" class="button">Search</button>
+        <button id="clear-button" class="button button--secondary">Clear</button>
+    </div>
+  </div>
+</div>
+
+<script class="js-shop-list" type="application/json">
+    {
+        "shops": [
+            {% paginate shop.metaobjects.shops.values by 500 %}
+                {% assign all_shops = shop.metaobjects.shops.values %}
+                {% for shop in all_shops %}     
+                                 
+                    {
+                        "id": {{ forloop.index0 | json }},
+                        "account_name": {{ shop.account_name | json }},
+                        "street_address": {{ shop.street_address | json }},
+                        "city": {{ shop.city | json }},
+                        "state": {{ shop.state | json }},
+                        "zip_code": {{ shop.zip_code | json }},
+                        "phone_number": {{ shop.phone_number | json }},
+                        "country": {{ shop.country | json }}
+                    }
+                    {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            {% endpaginate %}
+        ]
+    }
+</script>
+
+<script>
+    const rawData = document.querySelector('.js-shop-list')
+    const shopData = JSON.parse(rawData.innerText)
+    if (typeof mapboxgl !== 'undefined') {
+        mapboxgl.accessToken = {{ settings.map_api | json }};
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/artosousa/cm68wap9c00v001s2g2boha34',
+            center: [-98.5795, 39.8283],
+            zoom: 4
+        });
+        
+        const markers = [];
+        const metaobjectShops = shopData.shops;
+
+        async function getCoordinates(query) {
+            query = query.trim().toLowerCase();
+
+            // Match the shop by name or address
+            const shop = metaobjectShops.find((shop) =>
+                (shop.account_name?.toLowerCase().includes(query) ?? false) ||
+                (shop.street_address?.toLowerCase().includes(query) ?? false) ||
+                (shop.city?.toLowerCase().includes(query) ?? false) ||
+                (shop.state?.toLowerCase().includes(query) ?? false) ||
+                (shop.zip_code?.toLowerCase().includes(query) ?? false) ||
+                (shop.phone_number?.toLowerCase().includes(query) ?? false) ||
+                (shop.country?.toLowerCase().includes(query) ?? false)
+            );
+
+            if (shop) {
+                // If a shop is found, geocode its address
+                const fullAddress = `${shop.street_address}, ${shop.city}, ${shop.zip_code} ${shop.country ? `, ${shop.country}` : ''}`;
+                console.log(fullAddress)
+                const geocodeUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(fullAddress)}.json?access_token=${mapboxgl.accessToken}`;
+
+                const response = await fetch(geocodeUrl);
+                const data = await response.json();
+                if (data.features && data.features.length > 0) {
+                    return data.features[0].geometry.coordinates;
+                } else {
+                    console.error('Geocoding failed for address:', shop.account_name );
+                    return null;
+                }
+            } else {
+                // If no shop is found, attempt to geocode the query directly
+                const geocodeUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json?access_token=${mapboxgl.accessToken}`;
+                const response = await fetch(geocodeUrl);
+                const data = await response.json();
+                if (data.features && data.features.length > 0) {
+                    return data.features[0].geometry.coordinates;
+                } else {
+                    console.error('Geocoding failed for query:', query);
+                    return null;
+                }
+            }
+        }
+
+        function createCustomMarker() {
+            const el = document.createElement('div');
+            el.className = 'custom-marker';
+            el.style.backgroundImage = 'url("https://cdn.shopify.com/s/files/1/0696/9691/3696/files/Marker_a332104d-fc3b-416c-9822-f808c4210bcc.svg?v=1737646071")';
+            el.style.backgroundSize = 'contain';
+            el.style.width = '27px';
+            el.style.height = '41px';
+            return el;
+        }
+
+        // Render markers for all shops
+        metaobjectShops.forEach((shop) => {
+            const storeName = shop.account_name;
+            const address = shop.street_address;
+            const zipCode = shop.zip_code
+            const city = shop.city
+            const state = shop.state
+            const phoneNumber = shop.phone_number
+            const country = shop.country
+            getCoordinates(address).then((coordinates) => {
+                if (coordinates) {
+                    const customMarker = createCustomMarker();
+                    const marker = new mapboxgl.Marker({ element: customMarker })
+                        .setLngLat(coordinates)
+                        .setPopup(new mapboxgl.Popup().setHTML(`<strong>${storeName}</strong><br>${address}<br>${city} ${state !== null ?`, ${state}` : ''} <br> ${zipCode !== null ? `${zipCode}`: ''}<br>${phoneNumber ? `${phoneNumber}` : ''} <br /> ${country ? `${country}` : ''}`))
+                        .addTo(map);
+                    markers.push({ marker, storeName, address, zipCode, city, state, phoneNumber, coordinates });
+                }
+            }).catch((error) => {
+                console.error('Error adding marker for store:', storeName, error);
+            });
+        });
+
+        function calculateDistance(coord1, coord2) {
+            const toRad = (angle) => (Math.PI / 180) * angle;
+
+            const lat1 = coord1[1];
+            const lon1 = coord1[0];
+            const lat2 = coord2[1];
+            const lon2 = coord2[0];
+
+            const R = 3963; // Radius of Earth in miles
+            const dLat = toRad(lat2 - lat1);
+            const dLon = toRad(lon2 - lon1);
+
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
+        }
+
+        async function filterMarkersWithinRadius(query, radius = 50) {
+            const queryCoordinates = await getCoordinates(query);
+
+            if (!queryCoordinates) {
+                alert('No results found. Please check your search.');
+                return;
+            }
+
+            let found = false;
+            markers.forEach(({ marker, coordinates }) => {
+                const distance = calculateDistance(queryCoordinates, coordinates);
+                if (distance <= radius) {
+                    marker.getElement().style.display = '';
+                    found = true;
+                } else {
+                    marker.getElement().style.display = 'none';
+                }
+            });
+
+            if (!found) {
+                alert('No shops found within the specified radius.');
+            } else {
+                map.flyTo({ center: queryCoordinates, zoom: 8 });
+            }
+        }
+
+        function resetMarkers() {
+            markers.forEach(({ marker }) => {
+                marker.getElement().style.display = '';
+            });
+            document.getElementById('search-input').value = '';
+            map.flyTo({ center: [-98.5795, 39.8283], zoom: 4 });
+        }
+
+        document.getElementById('search-button').addEventListener('click', () => {
+            const query = document.getElementById('search-input').value;
+            filterMarkersWithinRadius(query, 50);
+        });
+
+        document.getElementById('search-input').addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const query = document.getElementById('search-input').value;
+                filterMarkersWithinRadius(query, 50);
+            }
+        });
+
+        document.getElementById('clear-button').addEventListener('click', resetMarkers);
+    } else {
+        console.error('Mapbox GL JS failed to load.');
+    }
+</script>
+
+{% schema %}
+{
+  "name": "Buy Local Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Buy Local Page"
+    }
+  ]
+}
+{% endschema %}

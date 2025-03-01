@@ -1,0 +1,36 @@
+<div class="instagram-feed" >
+  <div class="instagram-feed__col">
+    <div id="insta-feed"></div>
+  </div>
+  <div class="instagram-feed__col">
+    <div id="feed-36741" class="instafeed-shopify"></div>
+  </div>
+  <div class="instagram-feed__col ">
+    <div id="feed-36739" class="instafeed-shopify"></div>
+  </div>
+</div>
+{% style %}
+  .instagram-feed__col{
+    width: 100%;
+    float: left;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 750px){
+    .instagram-feed__col{
+      width: 33.33%;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Instagram Feed",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Instagram Feed"
+    }
+  ]
+}
+{% endschema %}
