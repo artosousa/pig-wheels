@@ -8,12 +8,12 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "Grip with Deck",
+    "name": "Background Image",
     "settings": [
       {
-        "type": "product",
-        "id": "add_grip",
-        "label": "Grip Sku"
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Select background image"
       }
     ]
   },

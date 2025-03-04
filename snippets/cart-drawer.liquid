@@ -19,14 +19,7 @@
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
-  {% assign grip_product = all_products[settings.add_grip] %}
-  {% assign grip_variant_id = grip_product.variants.first.id %}
 
-  <script type="application/json" id="js-cart-drawer-settings">
-      {
-        "grip_id": {{ grip_variant_id }}
-      }
-  </script>
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div

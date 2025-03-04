@@ -34,49 +34,49 @@ class CartDrawer extends HTMLElement {
     return cart.items; // Assuming 'items' is the array of products in the cart
   }
 
-  async addGripToCart() {
-    const gripData = document.getElementById('js-cart-drawer-settings');
-    const gripSettings = JSON.parse(gripData.innerHTML);
-    let gripCount = 0;
-    let deckCount = 0;
+  // async addGripToCart() {
+  //   const gripData = document.getElementById('js-cart-drawer-settings');
+  //   const gripSettings = JSON.parse(gripData.innerHTML);
+  //   let gripCount = 0;
+  //   let deckCount = 0;
 
-    const cartItems = await this.fetchCartContents();
-    const countedDecks = new Set();
-    cartItems.map((item) => {
+  //   const cartItems = await this.fetchCartContents();
+  //   const countedDecks = new Set();
+  //   cartItems.map((item) => {
         
 
-        // Loop through each item properties
-        for (const key in item.properties) {
-            if (item.properties["Add Grip + $5.00"] === "Yes" || item.product_type === "Deck") {
-              deckCount += item.quantity;
-              countedDecks.add(item.id);
-            }
-        }
+  //       // Loop through each item properties
+  //       for (const key in item.properties) {
+  //           if (item.properties["Add Grip + $5.00"] === "Yes" || item.product_type === "Deck") {
+  //             deckCount += item.quantity;
+  //             countedDecks.add(item.id);
+  //           }
+  //       }
 
-        // Check if product.handle is 'grip-single-sheet'
-        if (item.handle === 'grip-single-sheet') {
-            gripCount += item.quantity; // Increment gripCount by the item's quantity
-        }
-    });
+  //       // Check if product.handle is 'grip-single-sheet'
+  //       if (item.handle === 'grip-single-sheet') {
+  //           gripCount += item.quantity; // Increment gripCount by the item's quantity
+  //       }
+  //   });
 
-    // If deckCount is greater than 0, add grip to the cart
-    if (deckCount !== gripCount ) {
-        this.addGripToCartItem(gripSettings.grip_id, deckCount - gripCount);
-    }
+  //   // If deckCount is greater than 0, add grip to the cart
+  //   if (deckCount !== gripCount ) {
+  //       this.addGripToCartItem(gripSettings.grip_id, deckCount - gripCount);
+  //   }
 
 
-  }
+  // }
   // Function to add the grip item to the cart
-  addGripToCartItem(gripId, quantity) {
+  // addGripToCartItem(gripId, quantity) {
     
-    const gripItem = {
-          id: gripId,
-          quantity: quantity,
-      };
+  //   const gripItem = {
+  //         id: gripId,
+  //         quantity: quantity,
+  //     };
 
-      // Call the cart API or method to add this item to the cart
-      this.addToCart(gripItem); // Assuming this.addToCart is a function that handles adding an item to the cart
-  }
+  //     // Call the cart API or method to add this item to the cart
+  //     this.addToCart(gripItem); // Assuming this.addToCart is a function that handles adding an item to the cart
+  // }
   addToCart(item) {
     const isLoading = document.querySelector('#isLoading')
     isLoading.classList.remove('hidden')
@@ -132,7 +132,7 @@ class CartDrawer extends HTMLElement {
   }
 
   open(triggeredBy) {
-    this.addGripToCart()
+    //this.addGripToCart()
     
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');

@@ -18,14 +18,7 @@
     }
   }
 {%- endstyle -%}
-{% assign grip_product = all_products[settings.add_grip] %}
-{% assign grip_variant_id = grip_product.variants.first.id %}
 
-<script type="application/json" id="js-cart-drawer-settings">
-    {
-      "grip_id": {{ grip_variant_id }}
-    }
-</script>
 {%- unless settings.cart_type == 'drawer' -%}
   <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
