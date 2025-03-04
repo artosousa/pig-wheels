@@ -1,3 +1,5 @@
+{% assign block_count = section.blocks | size %}
+{% assign flex_percent = 100 | divided_by: block_count %}
 {%- style -%}
   .image-block-section {
       display: flex;
@@ -10,7 +12,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      gap: 6rem;
+      gap: 4rem;
     }
 
     .image-block {
@@ -58,7 +60,7 @@
       flex-direction: row;
     }
     .image-block{
-      flex: 1 1 50%;
+      flex: 1 1 {{ flex_percent }}%;
     }
     .image-block-wrapper {
       flex-direction: row;
@@ -106,7 +108,7 @@
       ]
     }
   ],
-  "max_blocks": 2,
+  "max_blocks": 3,
   "presets": [
     {
       "name": "Two Column Image Blocks"
