@@ -1,5 +1,6 @@
 {% assign block_count = section.blocks | size %}
 {% assign flex_percent = 100 | divided_by: block_count %}
+
 {%- style -%}
   .image-block-section {
       display: flex;
@@ -83,7 +84,7 @@
 
 {% schema %}
 {
-  "name": "Two Column Image Blocks",
+  "name": "Image Blocks",
   "settings": [],
   "blocks": [
     {
@@ -108,10 +109,10 @@
       ]
     }
   ],
-  "max_blocks": 3,
+  "max_blocks": 4,
   "presets": [
     {
-      "name": "Two Column Image Blocks"
+      "name": "Image Blocks"
     }
   ]
 }
