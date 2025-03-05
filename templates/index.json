@@ -13,7 +13,9 @@
       "type": "video-background",
       "settings": {
         "video": "shopify://files/videos/PIGWHEELS.mp4",
-        "autoplay": true
+        "autoplay": true,
+        "padding_top": 2,
+        "padding_bottom": 6
       }
     },
     "featured_collection": {
@@ -24,8 +26,8 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "wheels",
-        "products_to_show": 15,
+        "collection": "featured-2",
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": false,
@@ -43,10 +45,55 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "image_split_AKe8Ka": {
+      "type": "image-split",
+      "blocks": {
+        "image_block_PrgBLh": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/wheels.jpg",
+            "link_label": "WHEELS",
+            "link_url": "shopify://collections/wheels"
+          }
+        },
+        "image_block_jgGwn9": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Hardware.jpg",
+            "link_label": "HARDWARE",
+            "link_url": "shopify://collections/hardware"
+          }
+        },
+        "image_block_e7nVJQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Accessories.jpg",
+            "link_label": "ACCESSORIES",
+            "link_url": "shopify://collections/accessories"
+          }
+        },
+        "image_block_FqhGGe": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/APPAREL.jpg",
+            "link_label": "APPAREL",
+            "link_url": "shopify://collections/apparel"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_PrgBLh",
+        "image_block_jgGwn9",
+        "image_block_e7nVJQ",
+        "image_block_FqhGGe"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "video_background_EmfQnx",
-    "featured_collection"
+    "featured_collection",
+    "image_split_AKe8Ka"
   ]
 }

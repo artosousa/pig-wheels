@@ -2,20 +2,27 @@
 {% assign flex_percent = 100 | divided_by: block_count %}
 
 {%- style -%}
-  .image-block-section {
+    .image-block-section {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      ;
+      align-items:center;
+      justify-content: center;
+      margin-bottom: 6rem;
     }
   
     .image-block-wrapper {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 90%;
       gap: 4rem;
+      max-width: var(--page-width);
     }
-
+    @media screen and (min-width: 960px){
+      .image-block-wrapper {
+        width: 100%;
+      }
+    }
     .image-block {
       flex: 1 1 100%;
       aspect-ratio: 1;

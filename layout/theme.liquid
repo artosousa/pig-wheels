@@ -50,6 +50,7 @@
     {% style %}
       body,.shopify-section .gradient, .shopify-section .color-inverse{
         background-image: url({{ settings.background_image | image_url }}) !important;
+        background-size: cover;
       }
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -97,10 +98,7 @@
       }
       {% endfor %}
 
-      {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
-        background-color: rgb(var(--color-background));
-      }
+      
 
       :root {
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};

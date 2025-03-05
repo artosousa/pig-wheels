@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "background_image": "shopify://shop_images/pw-bg1.jpg",
     "logo": "shopify://shop_images/PigWheels_Logo.svg",
     "logo_width": 90,
     "map_api": "pk.eyJ1IjoiYXJ0b3NvdXNhIiwiYSI6ImNtNjh1NTUwZTBiNnAydW9jdjAxbHIydjcifQ.Fb5TaMg184yJ0pJO5KDICA",
@@ -45,7 +46,7 @@
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "center",
-    "card_color_scheme": "background-2",
+    "card_color_scheme": "background-1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 0,

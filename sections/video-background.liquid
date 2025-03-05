@@ -2,21 +2,32 @@
 {%- style -%}
   .{{section.id }}{
     padding-top: {{ section.settings.padding_top  }}rem;
-    padding-bottom: {{ section.settings.padding_bottom  }}rem;
+    display:flex;
+    align-items:center;
+    justify-content: center;
   }
-  .page-width{
-    max-width: max-width: var(--page-width);
+  .{{ section.id }}.page-width{
+    max-width:  var(--page-width);
   }
   .video-section {
     position: relative;
-    width: 100%;
-    height: 78vh;
+    width: 95%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     display:flex;
     align-items:center;
     justify-content:center;
     overflow: hidden;
     border-radius: 4rem;
+    margin: 0px auto;
+  }
+  @media screen and (min-width:960px){
+    .{{section.id }}{
+      padding-bottom: {{ section.settings.padding_bottom  }}rem;
+    }
+      .video-section{
+        width:100%;
+      }
   }
   .video-section video{
     width: 100%;

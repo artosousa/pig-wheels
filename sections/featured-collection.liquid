@@ -139,8 +139,8 @@
               <link href="//tum-yeto.myshopify.com/cdn/shop/t/12/assets/quick-order-list.css?v=129932180309343703061739291670" rel="stylesheet" type="text/css" media="all">
               <link href="//tum-yeto.myshopify.com/cdn/shop/t/12/assets/quantity-popover.css?v=129068967981937647381739291671" rel="stylesheet" type="text/css" media="all">
               <div class="card-wrapper product-card-wrapper underline-links-hover">
-                <div class=" card card--${settings.card_style} ${settings.card_style === 'card'? `color-${settings.color_scheme} gradient` : ''} ${settings.image_shape != 'default' ? 'card--shape' : ''  } card--media" style="--ratio-percent: ${1 / ratio * 100}%">
-                  <div class="card__inner ${settings.card_style === 'standard' ? `ratio color${settings.card_color_scheme} gradient` : ''}  " style="--ratio-percent: ${1 / ratio * 100}%">
+                <div class=" card card--${settings.card_style} ${settings.card_style === 'card'? `color-${settings.color_scheme} gradient` : ''} ${settings.image_shape != 'default' ? 'card--shape' : ''  } card--media" style="--ratio-percent: 100%">
+                  <div class="card__inner ${settings.card_style === 'standard' ? `ratio color${settings.card_color_scheme} gradient` : ''}  " style="--ratio-percent: 100%">
                     <div class="card__media ${settings.image_shape != 'default' ? `shape--${settings.image_shape} color-${settings.card_color_scheme} gradient`: ''  }">
                       <div class="media media--transparent media--hover-effect">
                         <img src="${randomProduct.featured_image}" style="object-fit:contain;"  alt="${randomProduct.title}" class="motion-reduce" loading="lazy" width="${randomProduct.media[0].width}" height="${randomProduct.media[0].height}">
