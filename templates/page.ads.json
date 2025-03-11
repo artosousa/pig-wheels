@@ -11,31 +11,6 @@
   "sections": {
     "ads": {
       "type": "main-ads",
-      "blocks": {
-        "ad_WVnXcV": {
-          "type": "ad",
-          "settings": {
-            "ad": "shopify://shop_images/02PIG_COLE_WEB_BANNER.jpg"
-          }
-        },
-        "ad_Wpedqp": {
-          "type": "ad",
-          "settings": {
-            "ad": "shopify://shop_images/03PIG_TOOL_WEB_BANNER.jpg"
-          }
-        },
-        "ad_jmcXzA": {
-          "type": "ad",
-          "settings": {
-            "ad": "shopify://shop_images/04PIG_NATURALS_BANNER.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "ad_WVnXcV",
-        "ad_Wpedqp",
-        "ad_jmcXzA"
-      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
