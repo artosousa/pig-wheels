@@ -17,9 +17,9 @@
         "image_wL8gjm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/FooterLogo3.png",
+            "image": "shopify://shop_images/PigWheels_Logo.svg",
             "image_width": 250,
-            "alignment": ""
+            "alignment": "center"
           }
         },
         "footer-0": {
@@ -36,10 +36,12 @@
             "subtext": "<p>📍<strong>Address:<br/></strong>2096 Newton Ave. San Diego, CA 92113<br/><strong>📞 Phone: <br/></strong>(619)232-7523<br/><strong>✉️ Email: <br/></strong><a href=\"mailto:contact@tumyeto.com\" title=\"mailto:contact@tumyeto.com\">Online Customer Support<br/></a><a href=\"mailto:b2b-inquiry@tumyeto.net\" title=\"mailto:b2b-inquiry@tumyeto.net\">New Shop or Distributor</a></p>"
           }
         },
-        "brand_logos_g6QQrz": {
-          "type": "brand_logos",
+        "image_a9KrCk": {
+          "type": "image",
           "settings": {
-            "heading": ""
+            "image": "shopify://shop_images/FooterLogo3.webp",
+            "image_width": 250,
+            "alignment": "center"
           }
         }
       },
@@ -47,7 +49,7 @@
         "image_wL8gjm",
         "footer-0",
         "text_pK8V3M",
-        "brand_logos_g6QQrz"
+        "image_a9KrCk"
       ],
       "settings": {
         "color_scheme": "accent-1",
