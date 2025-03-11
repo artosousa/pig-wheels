@@ -1,0 +1,10 @@
+.video-item.grid__item {
+    padding: 0;
+}
+
+
+.video-item.grid__item iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
