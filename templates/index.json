@@ -95,6 +95,7 @@
       "blocks": {
         "heading_j4hThj": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "h1"
@@ -102,6 +103,7 @@
         },
         "text_hQEK8T": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
@@ -109,6 +111,7 @@
         },
         "buttons_frfzF6": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
@@ -125,7 +128,7 @@
         "buttons_frfzF6"
       ],
       "settings": {
-        "image": "shopify://shop_images/WheelShapes.jpg",
+        "image": "shopify://shop_images/pw_shapes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
