@@ -14,6 +14,20 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "text_pK8V3M": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>📍<strong>Address:<br/></strong>2096 Newton Ave. San Diego, CA 92113<br/><strong>📞 Phone: <br/></strong>(619)232-7523<br/><strong>✉️ Email: <br/></strong><a href=\"mailto:contact@tumyeto.com\" title=\"mailto:contact@tumyeto.com\">Online Customer Support<br/></a><a href=\"mailto:b2b-inquiry@tumyeto.net\" title=\"mailto:b2b-inquiry@tumyeto.net\">New Shop or Distributor</a></p>"
+          }
+        },
         "image_wL8gjm": {
           "type": "image",
           "settings": {
@@ -29,27 +43,13 @@
             "image_width": 250,
             "alignment": "center"
           }
-        },
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "menu": "footer"
-          }
-        },
-        "text_pK8V3M": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p>📍<strong>Address:<br/></strong>2096 Newton Ave. San Diego, CA 92113<br/><strong>📞 Phone: <br/></strong>(619)232-7523<br/><strong>✉️ Email: <br/></strong><a href=\"mailto:contact@tumyeto.com\" title=\"mailto:contact@tumyeto.com\">Online Customer Support<br/></a><a href=\"mailto:b2b-inquiry@tumyeto.net\" title=\"mailto:b2b-inquiry@tumyeto.net\">New Shop or Distributor</a></p>"
-          }
         }
       },
       "block_order": [
-        "image_wL8gjm",
-        "image_yrAxfD",
         "footer-0",
-        "text_pK8V3M"
+        "text_pK8V3M",
+        "image_wL8gjm",
+        "image_yrAxfD"
       ],
       "settings": {
         "color_scheme": "accent-1",
