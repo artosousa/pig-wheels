@@ -11,6 +11,50 @@
   "sections": {
     "team": {
       "type": "main-team",
+      "blocks": {
+        "team_member_49i74b": {
+          "type": "team_member",
+          "settings": {
+            "name": "Leo Romero",
+            "ig": "leoromero",
+            "ig_url": "https://instagram.com/leoromero",
+            "image": "shopify://shop_images/leo.jpg"
+          }
+        },
+        "team_member_GPPRUj": {
+          "type": "team_member",
+          "settings": {
+            "name": "Braden Hoban",
+            "ig": "bradenhoban",
+            "ig_url": "https://instagram.com/bradenhoban",
+            "image": "shopify://shop_images/braden.jpg"
+          }
+        },
+        "team_member_CWBa6Y": {
+          "type": "team_member",
+          "settings": {
+            "name": "Cordano Russell",
+            "ig": "cordano04",
+            "ig_url": "https://instagram.com/cordano04",
+            "image": "shopify://shop_images/Cordano.jpg"
+          }
+        },
+        "team_member_6MRRXi": {
+          "type": "team_member",
+          "settings": {
+            "name": "Adam Arunski",
+            "ig": "adamarunski",
+            "ig_url": "https://instagram.com/adamarunski",
+            "image": "shopify://shop_images/Arunski.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_49i74b",
+        "team_member_GPPRUj",
+        "team_member_CWBa6Y",
+        "team_member_6MRRXi"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
