@@ -62,7 +62,8 @@
           "settings": {
             "name": "Julian Lewis",
             "ig": "_julianlewis",
-            "ig_url": "https://www.instagram.com/_julianlewis/"
+            "ig_url": "https://www.instagram.com/_julianlewis/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
           }
         },
         "team_member_HjQPe3": {
@@ -70,7 +71,8 @@
           "settings": {
             "name": "Jeremy LEabres",
             "ig": "jeremy_leabres",
-            "ig_url": "https://www.instagram.com/jeremy_leabres/"
+            "ig_url": "https://www.instagram.com/jeremy_leabres/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
           }
         },
         "team_member_F9aGT3": {
@@ -78,7 +80,8 @@
           "settings": {
             "name": "Corey Glick",
             "ig": "coreyglick_",
-            "ig_url": "https://www.instagram.com/coreyglick_/"
+            "ig_url": "https://www.instagram.com/coreyglick_/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
           }
         },
         "team_member_KJRhLk": {
@@ -86,7 +89,8 @@
           "settings": {
             "name": "Myles Willard",
             "ig": "myleswillard",
-            "ig_url": "https://www.instagram.com/myleswillard/"
+            "ig_url": "https://www.instagram.com/myleswillard/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
           }
         },
         "team_member_zjhaeT": {
@@ -94,7 +98,8 @@
           "settings": {
             "name": "Ryan Hamburg",
             "ig": "ryan_hamburg",
-            "ig_url": "https://www.instagram.com/ryan_hamburg/"
+            "ig_url": "https://www.instagram.com/ryan_hamburg/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
           }
         }
       },
