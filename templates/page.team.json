@@ -87,6 +87,14 @@
             "ig": "myleswillard",
             "ig_url": "https://www.instagram.com/myleswillard/"
           }
+        },
+        "team_member_zjhaeT": {
+          "type": "team_member",
+          "settings": {
+            "name": "Ryan Hamburg",
+            "ig": "ryan_hamburg",
+            "ig_url": "https://www.instagram.com/ryan_hamburg/"
+          }
         }
       },
       "block_order": [
@@ -98,7 +106,8 @@
         "team_member_chXnAj",
         "team_member_HjQPe3",
         "team_member_F9aGT3",
-        "team_member_KJRhLk"
+        "team_member_KJRhLk",
+        "team_member_zjhaeT"
       ],
       "settings": {
         "padding_top": 28,
