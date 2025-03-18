@@ -47,13 +47,22 @@
             "ig_url": "https://instagram.com/adamarunski",
             "image": "shopify://shop_images/Arunski.jpg"
           }
+        },
+        "team_member_hPDeVh": {
+          "type": "team_member",
+          "settings": {
+            "name": "Georgia Martin",
+            "ig": "georgiamartn",
+            "ig_url": "https://www.instagram.com/georgiamartn/"
+          }
         }
       },
       "block_order": [
         "team_member_49i74b",
         "team_member_GPPRUj",
         "team_member_CWBa6Y",
-        "team_member_6MRRXi"
+        "team_member_6MRRXi",
+        "team_member_hPDeVh"
       ],
       "settings": {
         "padding_top": 28,
