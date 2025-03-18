@@ -55,6 +55,14 @@
             "ig": "georgiamartn",
             "ig_url": "https://www.instagram.com/georgiamartn/"
           }
+        },
+        "team_member_chXnAj": {
+          "type": "team_member",
+          "settings": {
+            "name": "Julian Lewis",
+            "ig": "_julianlewis",
+            "ig_url": "https://www.instagram.com/_julianlewis/"
+          }
         }
       },
       "block_order": [
@@ -62,7 +70,8 @@
         "team_member_GPPRUj",
         "team_member_CWBa6Y",
         "team_member_6MRRXi",
-        "team_member_hPDeVh"
+        "team_member_hPDeVh",
+        "team_member_chXnAj"
       ],
       "settings": {
         "padding_top": 28,
