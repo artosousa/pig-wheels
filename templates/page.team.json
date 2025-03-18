@@ -63,6 +63,14 @@
             "ig": "_julianlewis",
             "ig_url": "https://www.instagram.com/_julianlewis/"
           }
+        },
+        "team_member_F9aGT3": {
+          "type": "team_member",
+          "settings": {
+            "name": "Corey Glick",
+            "ig": "coreyglick_",
+            "ig_url": "https://www.instagram.com/coreyglick_/"
+          }
         }
       },
       "block_order": [
@@ -71,7 +79,8 @@
         "team_member_CWBa6Y",
         "team_member_6MRRXi",
         "team_member_hPDeVh",
-        "team_member_chXnAj"
+        "team_member_chXnAj",
+        "team_member_F9aGT3"
       ],
       "settings": {
         "padding_top": 28,
