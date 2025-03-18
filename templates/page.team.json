@@ -64,6 +64,14 @@
             "ig_url": "https://www.instagram.com/_julianlewis/"
           }
         },
+        "team_member_HjQPe3": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jeremy LEabres",
+            "ig": "jeremy_leabres",
+            "ig_url": "https://www.instagram.com/jeremy_leabres/"
+          }
+        },
         "team_member_F9aGT3": {
           "type": "team_member",
           "settings": {
@@ -80,6 +88,7 @@
         "team_member_6MRRXi",
         "team_member_hPDeVh",
         "team_member_chXnAj",
+        "team_member_HjQPe3",
         "team_member_F9aGT3"
       ],
       "settings": {
