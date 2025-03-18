@@ -79,6 +79,14 @@
             "ig": "coreyglick_",
             "ig_url": "https://www.instagram.com/coreyglick_/"
           }
+        },
+        "team_member_KJRhLk": {
+          "type": "team_member",
+          "settings": {
+            "name": "Myles Willard",
+            "ig": "myleswillard",
+            "ig_url": "https://www.instagram.com/myleswillard/"
+          }
         }
       },
       "block_order": [
@@ -89,7 +97,8 @@
         "team_member_hPDeVh",
         "team_member_chXnAj",
         "team_member_HjQPe3",
-        "team_member_F9aGT3"
+        "team_member_F9aGT3",
+        "team_member_KJRhLk"
       ],
       "settings": {
         "padding_top": 28,
