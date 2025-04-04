@@ -124,6 +124,7 @@
         "text_hQEK8T",
         "buttons_frfzF6"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/pw_shapes.jpg",
         "image_overlay_opacity": 0,
