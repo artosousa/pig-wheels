@@ -15,26 +15,33 @@
         "ad_WVnXcV": {
           "type": "ad",
           "settings": {
-            "ad": "shopify://shop_images/02PIG_COLE_WEB_BANNER.jpg"
+            "ad": "shopify://shop_images/ty_fall2559.jpg"
           }
         },
         "ad_Wpedqp": {
           "type": "ad",
           "settings": {
-            "ad": "shopify://shop_images/03PIG_TOOL_WEB_BANNER.jpg"
+            "ad": "shopify://shop_images/ty_fall2548.jpg"
           }
         },
         "ad_jmcXzA": {
           "type": "ad",
           "settings": {
-            "ad": "shopify://shop_images/04PIG_NATURALS_BANNER.jpg"
+            "ad": "shopify://shop_images/ty_fall2547.jpg"
+          }
+        },
+        "ad_77K4ry": {
+          "type": "ad",
+          "settings": {
+            "ad": "shopify://shop_images/ty_fall2552.jpg"
           }
         }
       },
       "block_order": [
         "ad_WVnXcV",
         "ad_Wpedqp",
-        "ad_jmcXzA"
+        "ad_jmcXzA",
+        "ad_77K4ry"
       ],
       "settings": {
         "padding_top": 28,
