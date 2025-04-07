@@ -11,6 +11,110 @@
   "sections": {
     "team": {
       "type": "main-team",
+      "blocks": {
+        "team_member_49i74b": {
+          "type": "team_member",
+          "settings": {
+            "name": "Leo Romero",
+            "ig": "leoromero",
+            "ig_url": "https://instagram.com/leoromero",
+            "image": "shopify://shop_images/leo.jpg"
+          }
+        },
+        "team_member_GPPRUj": {
+          "type": "team_member",
+          "settings": {
+            "name": "Braden Hoban",
+            "ig": "bradenhoban",
+            "ig_url": "https://instagram.com/bradenhoban",
+            "image": "shopify://shop_images/braden.jpg"
+          }
+        },
+        "team_member_CWBa6Y": {
+          "type": "team_member",
+          "settings": {
+            "name": "Cordano Russell",
+            "ig": "cordano04",
+            "ig_url": "https://instagram.com/cordano04",
+            "image": "shopify://shop_images/Cordano.jpg"
+          }
+        },
+        "team_member_6MRRXi": {
+          "type": "team_member",
+          "settings": {
+            "name": "Adam Arunski",
+            "ig": "adamarunski",
+            "ig_url": "https://instagram.com/adamarunski",
+            "image": "shopify://shop_images/Arunski.jpg"
+          }
+        },
+        "team_member_hPDeVh": {
+          "type": "team_member",
+          "settings": {
+            "name": "Georgia Martin",
+            "ig": "georgiamartn",
+            "ig_url": "https://www.instagram.com/georgiamartn/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        },
+        "team_member_chXnAj": {
+          "type": "team_member",
+          "settings": {
+            "name": "Julian Lewis",
+            "ig": "_julianlewis",
+            "ig_url": "https://www.instagram.com/_julianlewis/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        },
+        "team_member_HjQPe3": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jeremy LEabres",
+            "ig": "jeremy_leabres",
+            "ig_url": "https://www.instagram.com/jeremy_leabres/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        },
+        "team_member_F9aGT3": {
+          "type": "team_member",
+          "settings": {
+            "name": "Corey Glick",
+            "ig": "coreyglick_",
+            "ig_url": "https://www.instagram.com/coreyglick_/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        },
+        "team_member_KJRhLk": {
+          "type": "team_member",
+          "settings": {
+            "name": "Myles Willard",
+            "ig": "myleswillard",
+            "ig_url": "https://www.instagram.com/myleswillard/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        },
+        "team_member_zjhaeT": {
+          "type": "team_member",
+          "settings": {
+            "name": "Ryan Hamburg",
+            "ig": "ryan_hamburg",
+            "ig_url": "https://www.instagram.com/ryan_hamburg/",
+            "image": "shopify://shop_images/pw_headerlogo.png"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_49i74b",
+        "team_member_GPPRUj",
+        "team_member_CWBa6Y",
+        "team_member_6MRRXi",
+        "team_member_hPDeVh",
+        "team_member_chXnAj",
+        "team_member_HjQPe3",
+        "team_member_F9aGT3",
+        "team_member_KJRhLk",
+        "team_member_zjhaeT"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28

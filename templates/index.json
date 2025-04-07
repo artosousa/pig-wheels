@@ -124,8 +124,9 @@
         "text_hQEK8T",
         "buttons_frfzF6"
       ],
+      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/WheelShapes.jpg",
+        "image": "shopify://shop_images/pw_shapes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",

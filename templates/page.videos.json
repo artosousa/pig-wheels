@@ -11,6 +11,59 @@
   "sections": {
     "videos": {
       "type": "main-videos",
+      "blocks": {
+        "video_AEKfj6": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=-0kFHVJ_yqs&ab_channel=PIGWHEELS"
+          }
+        },
+        "video_LM46kL": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=3bbOZE2vTBg&ab_channel=PIGWHEELS"
+          }
+        },
+        "video_aG98wB": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=ilOtPLCkutg&ab_channel=PIGWHEELS"
+          }
+        },
+        "video_JtbaiK": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=orcfQVRCLDI&ab_channel=PIGWHEELS"
+          }
+        },
+        "video_RFekeM": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=gtJB4zEE7jQ"
+          }
+        },
+        "video_HxKg3b": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=nZNXx1jErYk"
+          }
+        },
+        "video_9qidat": {
+          "type": "video",
+          "settings": {
+            "youtube_url": "https://www.youtube.com/watch?v=YpejqC4_if0"
+          }
+        }
+      },
+      "block_order": [
+        "video_AEKfj6",
+        "video_LM46kL",
+        "video_aG98wB",
+        "video_JtbaiK",
+        "video_RFekeM",
+        "video_HxKg3b",
+        "video_9qidat"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28

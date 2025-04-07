@@ -11,6 +11,38 @@
   "sections": {
     "shapes": {
       "type": "main-shapes",
+      "blocks": {
+        "shape_cqDRd8": {
+          "type": "shape",
+          "settings": {
+            "shape": "shopify://shop_images/classic_84f54d67-87ae-4fea-9c23-2a0f7362fbcb.webp"
+          }
+        },
+        "shape_3xCgVV": {
+          "type": "shape",
+          "settings": {
+            "shape": "shopify://shop_images/conical_d904b678-578f-497f-af6e-8535ae7e8b95.webp"
+          }
+        },
+        "shape_wcQzdN": {
+          "type": "shape",
+          "settings": {
+            "shape": "shopify://shop_images/combo_41f08d7c-bc6a-459e-92d9-2938ed1fbe1f.webp"
+          }
+        },
+        "shape_UnPBbk": {
+          "type": "shape",
+          "settings": {
+            "shape": "shopify://shop_images/cube_c38c1d45-7bf7-4795-b31f-cebedfd8ea15.webp"
+          }
+        }
+      },
+      "block_order": [
+        "shape_cqDRd8",
+        "shape_3xCgVV",
+        "shape_wcQzdN",
+        "shape_UnPBbk"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28

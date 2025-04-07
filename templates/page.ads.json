@@ -11,6 +11,38 @@
   "sections": {
     "ads": {
       "type": "main-ads",
+      "blocks": {
+        "ad_WVnXcV": {
+          "type": "ad",
+          "settings": {
+            "ad": "shopify://shop_images/ty_fall2559.jpg"
+          }
+        },
+        "ad_Wpedqp": {
+          "type": "ad",
+          "settings": {
+            "ad": "shopify://shop_images/ty_fall2548.jpg"
+          }
+        },
+        "ad_jmcXzA": {
+          "type": "ad",
+          "settings": {
+            "ad": "shopify://shop_images/ty_fall2547.jpg"
+          }
+        },
+        "ad_77K4ry": {
+          "type": "ad",
+          "settings": {
+            "ad": "shopify://shop_images/ty_fall2552.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "ad_WVnXcV",
+        "ad_Wpedqp",
+        "ad_jmcXzA",
+        "ad_77K4ry"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28

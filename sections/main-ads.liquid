@@ -7,7 +7,9 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .ads-page img{
+    max-width: 940px !important;
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -22,17 +24,9 @@
     {% for block in section.blocks %}
         {% if block.settings.ad != blank %}
             <img
-                srcset="
-                {%- if block.settings.ad.width >= 165 -%}{{ block.settings.ad | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if block.settings.ad.width >= 360 -%}{{ block.settings.ad | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if block.settings.ad.width >= 533 -%}{{ block.settings.ad | image_url: width: 533 }} 533w,{%- endif -%}
-                {%- if block.settings.ad.width >= 720 -%}{{ block.settings.ad | image_url: width: 720 }} 720w,{%- endif -%}
-                {%- if block.settings.ad.width >= 940 -%}{{ block.settings.ad | image_url: width: 940 }} 940w,{%- endif -%}
-                {%- if block.settings.ad.width >= 1066 -%}{{ block.settings.ad | image_url: width: 1066 }} 1066w,{%- endif -%}
-                {{ block.settings.ad | image_url }} {{ block.settings.ad.width }}w
-                "
+                
                 src="{{ block.settings.ad | image_url: width: 940 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                
                 alt="{{ block.settings.ad.alt | escape }}"
                 class="motion-reduce"
                 loading="lazy"
