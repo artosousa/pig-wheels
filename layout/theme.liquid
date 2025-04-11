@@ -48,9 +48,10 @@
     %}
 
     {% style %}
-      body,.shopify-section .gradient, .shopify-section .color-inverse{
+      body,.shopify-section .gradient, .shopify-section .color-inverse, footer.color-inverse{
         background-image: url({{ settings.background_image | image_url }}) !important;
-        background-size: cover;
+        background-size: cover !important;
+        background-attachment: fixed !important;
       }
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
