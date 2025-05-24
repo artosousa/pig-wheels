@@ -138,12 +138,23 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "modal_yqfDpf": {
+      "type": "modal",
+      "name": "Modal Popup",
+      "settings": {
+        "popup_image": "shopify://shop_images/pw_MEMORIAL25.jpg",
+        "heading": "",
+        "message": "",
+        "theme": "dark"
+      }
     }
   },
   "order": [
     "video_background_EmfQnx",
     "featured_collection",
     "image_split_AKe8Ka",
-    "image_banner_no_title_ABh6gU"
+    "image_banner_no_title_ABh6gU",
+    "modal_yqfDpf"
   ]
 }
